@@ -12,4 +12,3 @@ The program calculates and outputs the distance between each pair of points and 
 
 To start the program execute the run.sh file in your terminal or IDE
 > ./run.sh
-Then enter in the cities and the way points
