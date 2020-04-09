@@ -19,7 +19,7 @@ void journey::inputPoints()
 	while (run)   // exists loop only if all cities are entered correctly
 	{
         // enter starting city
-        cout << "\nEnter Starting city: ";
+        cout << "Enter Starting city: ";
         cin >> startPoint;
 
         // enter destination city
@@ -67,25 +67,25 @@ void journey::getTotalDistance()
 	float endlat = checking.getLongitudeAtLocation(endPoint);
 	float distanceStartEnd = haversineFormula(startlong, startlat, endlong, endlat);
     cout << "\n";
-    cout << "Distance between start point and end point is" << distanceStartEnd << endl;;
+    cout << "Distance between " << startPoint << " and " << endPoint << " is " << distanceStartEnd << endl;;
 
     float way1long=checking.getLatitudeAtLocation(wayPoint1);
 	float way1lat=checking.getLongitudeAtLocation(wayPoint1);
     float distanceStartWay1 = haversineFormula(startlong, startlat, way1long, way1lat);
-    cout << "Distance between start point and way point 1 is " << distanceStartWay1 << endl;;
+    cout << "Distance between " << startPoint << " and " << wayPoint1 << " is " << distanceStartWay1 << endl;;
 
 	float way2long=checking.getLatitudeAtLocation(wayPoint2);
 	float way2lat=checking.getLongitudeAtLocation(wayPoint2);
     float distanceWay1Way2 = haversineFormula(way1long, way1lat, way2long, way2lat);
-    cout << "Distance between way point 1 and way point 2 is "<< distanceWay1Way2 << endl;
+    cout << "Distance between " << wayPoint1 << " and " << wayPoint2 << " is " << distanceWay1Way2 << endl;
 
 	float way3long=checking.getLatitudeAtLocation(wayPoint3);
 	float way3lat=checking.getLongitudeAtLocation(wayPoint3);
     float distanceWay2Way3 = haversineFormula(way2long, way2lat, way3long, way3lat);
-    cout << "Distance between way point 2 and way point 3 is " << distanceWay2Way3 << endl;
+    cout << "Distance between " << wayPoint2 << " and " << wayPoint3 << " is " << distanceWay2Way3 << endl;
 
     float distanceWay3End = haversineFormula(way3long, way3lat, endlong, endlat);
-    cout << "Distance between way point 3 and the end point is " << distanceWay3End << endl;
+    cout << "Distance between " << wayPoint3 << " and " <<  endPoint << " is " << distanceWay3End << endl;
 	// Total distance from start point to end point through way points
     float distanceTotal = distanceWay3End + distanceWay2Way3 + distanceWay1Way2 + distanceStartWay1;
 	cout << "Total Distance through way points is " << distanceTotal << endl;
