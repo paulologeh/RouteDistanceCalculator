@@ -86,53 +86,51 @@ bool database::checkPointDatabase(string startPoint, string endPoint, string way
 
 float database::getLatitudeAtLocation(string point)
  {
-	int i;
-	float a,b,d;
-	char c;
-	for(i=0;i<120;i++)
+	float degrees, minutes, latitude;
+	char direction;
+	for(int i=0; i<120; i++)
 	{
-		if(point==locations[i].city)
+		if(point == locations[i].city)
 		{
 			// Read latitude values
-			a=locations[i].latitude_degree;
-			b=locations[i].latitude_minutes;
-			c=locations[i].latitude_direction;
+			degrees = locations[i].longitude_degree;
+			minutes = locations[i].longitude_minutes;
+			latitude= locations[i].longitude_direction;
 		}
 	}
-	b=b*0.000291; // converts minutes to radians
-    a=a*0.01745; // converts degrees to radians
+	minutes = minutes * 0.000291; // converts minutes to radians
+    degrees = degrees * 0.01745; // converts degrees to radians
 	
-	d=a+b;   // total angle in degrees
-	if(c=='S')
+	latitude = degrees + minutes;   // total angle in degrees
+	if(direction == 'S')
 	{
-	  d=-1*d;	// Makes angle negative because of south
+	  latitude = -1*latitude;	// Makes angle negative because of south
 	            // North is positive, South is negative, East is positive, West is negative                 
 	}
-	return d;
+	return latitude;
 }
 float database::getLongitudeAtLocation(string point)
 {
-	int i;
-	float a,b,d;
-	char c;
-	for(i=0;i<120;i++)
+	float degrees, minutes, longitude;
+	char direction;
+	for(int i=0; i<120; i++)
 	{
-		if(point==locations[i].city)
+		if(point == locations[i].city)
 		{
 			// Reads latitude values
-			a=locations[i].longitude_degree;
-			b=locations[i].longitude_minutes;
-			c=locations[i].longitude_direction;
+			degrees = locations[i].longitude_degree;
+			minutes = locations[i].longitude_minutes;
+			longitude = locations[i].longitude_direction;
 		}
 	}
-	b=b*0.000291; // converts minutes to radians
-	a=a*0.01745; // converts degrees to radians
-	d=a+b;  // total angle in degrees
+	minutes = minutes * 0.000291; // converts minutes to radians
+	degrees = degrees * 0.01745; // converts degrees to radians
+	longitude = degrees + minutes;  // total angle in degrees
 
-	if(c=='W')
+	if(direction == 'W')
 	{
-		d= -1*d;  // Makes angle negative because of West
+		longitude= -1 * longitude ;  // Makes angle negative because of West
 	            // North is positive, South is negative, East is positive, West is negative   
 	}
-	return d;
+	return longitude;
 }

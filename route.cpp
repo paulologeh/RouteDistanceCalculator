@@ -16,7 +16,7 @@ void journey::inputPoints()
 	bool run = true;
 	checking.initialiseDatabase(); // calls function to initialise the database
 		
-	while (true)   // exists loop only if all cities are entered correctly
+	while (run)   // exists loop only if all cities are entered correctly
 	{
 		// enter starting city
 	cout << "\nEnter Starting city: ";
@@ -36,8 +36,8 @@ void journey::inputPoints()
 	cin >> wayPoint3;
 	
 	run = checking.checkPointDatabase(startPoint, endPoint, wayPoint1, wayPoint2, wayPoint3);  // returns 0 if all cities are correct or 1 if all cities are incorrect
-	// returns 0 to exit loop
-	
+	// returns false to exit the loop
+    cout << "Returning " << run << endl;	
 	}
 
 }
@@ -127,7 +127,6 @@ void journey::getTotalDistance()
 	
 	// Total distance from start point to end point through way points
 	total_route= start_way1 + way1_way2 + way2_way3 + way3_end;  // Adds all way points
-	cout << "\nTotal Distance through way points is ";
-	cout << total_route;
+	cout << "\nTotal Distance through way points is " << total_route << endl;
 	
 }
