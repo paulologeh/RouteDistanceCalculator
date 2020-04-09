@@ -109,6 +109,8 @@ float database::getLatitudeAtLocation(string point)
 	}
 	return latitude;
 }
+
+
 float database::getLongitudeAtLocation(string point)
 {
 	float degrees, minutes, longitude;
