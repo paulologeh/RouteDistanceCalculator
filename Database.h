@@ -4,8 +4,8 @@
 // 03/11/2015
 
 #include <fstream>
-#include <string>
 #include <iostream>
+
 using namespace std;
 
 // Structure containing all the attritubtes of location
@@ -32,7 +32,7 @@ class database
 	// functions
 	public:
 		void initialiseDatabase();
-		int checkPointDatabase(string, string, string, string, string);
+		bool checkPointDatabase(string, string, string, string, string);
 		float getLatitudeAtLocation(string);
 		float getLongitudeAtLocation(string);
 		

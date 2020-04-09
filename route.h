@@ -4,8 +4,7 @@
 // 03/11/2015
 
 #include "Database.h"
-#include <string>
-#include <iostream>
+
 using namespace std;
 
 class journey

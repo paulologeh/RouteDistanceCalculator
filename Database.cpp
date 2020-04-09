@@ -8,13 +8,13 @@
 #include <string.h>
 #include <math.h>
 #include <iomanip>
+
 using namespace std;
 
 void database::initialiseDatabase()
 {
 	databasefile.open("locDatabase.txt");  // Opens text file containing location data
-	int i;
-	for (i=0;i<120;i++)
+	for (int i=0; i<120; i++)
 	{
 		databasefile >> locations[i].city >> locations[i].country>> locations[i].latitude_degree >> locations[i].latitude_minutes >> locations[i].latitude_direction >> locations[i].longitude_degree >> locations[i].longitude_minutes >> locations[i].longitude_direction;
 		 // outputs data from file into array of struct         
@@ -22,124 +22,65 @@ void database::initialiseDatabase()
 }
 
 
-int database::checkPointDatabase(string startPoint, string endPoint, string wayPoint1, string wayPoint2, string wayPoint3)
+bool database::checkPointDatabase(string startPoint, string endPoint, string wayPoint1, string wayPoint2, string wayPoint3)
 {
-	int j,k,l,m,n;
-	int i;
+	bool validStart = false, validEnd = false, validWay1 = false, validWay2 = false, validWay3 = false;
 
+	for(int i=0; i<120; i++)
+	{
+		if (locations[i].city == startPoint)
+		{
+			validStart = true;
+		}
+		if (locations[i].city == endPoint)
+		{
+			validEnd = true;
+		}
+		if (locations[i].city == wayPoint1)
+		{
+			validWay1 = true;
+		}
+		if (locations[i].city == wayPoint2)
+		{
+			validWay2 = true;
+		}
+		if (locations[i].city == wayPoint3)
+		{
+			validWay3 = true;
+		}
+	}
 
-        // Check is start point is valid
- 
-        j=2;
-        
-		for(i=0;i<120;i++)
-		{
-			if (startPoint==locations[i].city)
-			{
-				j=0;
-				
-			}		
-	    }
-		
-		// Checks if j has changed	
-		if (j==2)
-		{
-			cout << "Start Point is not in Database\n";		// Error message
-		}
-		else
-		{
-			cout << "Start Point is in Database.\n";
-		}
-		
-		// Check is end point is valid
-		
-		k=2;
-		for(i=0;i<120;i++)
-		{
+	if (!validStart)
+	{
+		cout << startPoint << " is not in Database\n";
+	}
+	
+	if (!validEnd)
+	{
+		cout << endPoint << " is not in Databse\n";
+	}
 
-			if (endPoint==locations[i].city)
-			{
-				k=0;
-			}
-	    }
-			
-		if (k==2)
-		{
-			cout << "End Point is not in Database\n";   // Error Message
-		}
-		else
-		{
-		    cout << "End Point is in Database.\n";
-		}
-		
-		l=2;
-		// Check is way point1 is valid
-		for(i=0;i<120;i++)
-		{
-			if (wayPoint1==locations[i].city)
-			{
-				l=0;
-			}
-	    }
-			
-    	if (l==2)
-		{
-			cout << "Way Point1 is not in Database\n";    // Error message
-		}
-		else
-		{
-			cout << "Way Point1 is in Database.\n";
-		}
-		
-		
-		// Check is way point2 is valid
-        m=2;
-		for(i=0;i<120;i++)
-		{
-	 	if (wayPoint2==locations[i].city)
-			{	
-				m=0;
-			}
-	    }
-			
-		if (m==2)
-		{
-			cout << "Way Point2 is not in Database\n"; // Error message
-		}
-		else
-		{
-			cout << "Way Point2 is in Database.\n";
-		}
-		
-		
-		// Check is way point3 is valid
-		n=2;
-		for(i=0;i<120;i++)
-		{
-			if (wayPoint3==locations[i].city)
-			{
-				n=0;
-			}
-	    }
-			
-		if (n==2)
-		{
-			cout << "Way Point3 is not in Database\n";    // Error message
-		}
-		else
-		{
-			cout << "Way Point3 is in Database.\n";
-		}
-		
-		// Determine return value
-		if (j==2 || k==2 || l==2 || m==2 || n==2)
-		{
-			return 1; // returns 1 if any point is not in database
-		}
-		else
-		{
-			return 0; // returns 0 if all are in database
-		}
+	if(!validWay1)
+	{
+		cout << wayPoint1 << " is not in Databse\n";
+	}
+
+	if(!validWay2)
+	{
+		cout << wayPoint2 << " is not in Databse\n";
+	}
+
+	if(!validWay3)
+	{
+		cout << wayPoint3 << " is not in Databse\n";
+	}
+
+	if (!validStart || !validEnd || !validWay2 || !validWay1 || !validWay3)
+	{
+		return true;
+	}
+
+	return false;
 }
 
 

@@ -3,19 +3,16 @@
 // 03/11/2015
 
 #include "route.h"
-#include <string.h>
-#include<cstdio>
-#include<cstdlib>
-#include<iostream>
-using namespace std;
 
 int main()
 {
-	journey Ajourney;
+	journey myJourney;
 
-	cout << "Welcome to my program \n";
-	Ajourney.inputPoints();  // call function to input points
-    Ajourney.getTotalDistance();  // call funtion to calculate the distances between inputted points
-	system("pause");
+	std::cout << " Route Distance Calculator\n";
+	std::cout << "Calculates distance between 2 points\n";
 	
+	myJourney.inputPoints();  // call function to input points
+    myJourney.getTotalDistance();  // call funtion to calculate the distances between inputted points
+
+	return 0;
 }

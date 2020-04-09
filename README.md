@@ -8,3 +8,8 @@ This includes the start point, the end point and three cities that should be way
 Distances between cities are calculated using latitude and longitude values for each point. The distance that should be calculated is the “great circle” distance, using the Haversine formula. (see http://en.wikipedia.org/wiki/Haversine_formula and http://www.movable-type.co.uk/scripts/latlong.html.4. The program inputs the latitude and longitude values for locations of cities from the locDatabase.txt file
 The route between the start point and the end point shall include the three cities input as way points. The order of points on the route are: start point, way point 1, way point 2, way point 3, end point.
 The program calculates and outputs the distance between each pair of points and the total distance on the route.
+
+
+To start the program execute the run.sh file in your terminal or IDE
+>> ./run.sh
+Then enter in the cities and the way points

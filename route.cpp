@@ -13,10 +13,10 @@ using namespace std;
 
 void journey::inputPoints()
 {
-	int a=1;
+	bool run = true;
 	checking.initialiseDatabase(); // calls function to initialise the database
 		
-	while (a==1)   // exists loop only if all cities are entered correctly
+	while (true)   // exists loop only if all cities are entered correctly
 	{
 		// enter starting city
 	cout << "\nEnter Starting city: ";
@@ -35,7 +35,7 @@ void journey::inputPoints()
 	cout << "Enter last city: ";
 	cin >> wayPoint3;
 	
-	a=checking.checkPointDatabase(startPoint, endPoint, wayPoint1, wayPoint2, wayPoint3);  // returns 0 if all cities are correct or 1 if all cities are incorrect
+	run = checking.checkPointDatabase(startPoint, endPoint, wayPoint1, wayPoint2, wayPoint3);  // returns 0 if all cities are correct or 1 if all cities are incorrect
 	// returns 0 to exit loop
 	
 	}
