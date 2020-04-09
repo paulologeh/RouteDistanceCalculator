@@ -4,7 +4,7 @@
 // 03/11/2015
 
 #include "Database.h"
-#include <string.h>
+#include <string>
 #include <iostream>
 using namespace std;
 
@@ -16,7 +16,7 @@ class journey
 		string wayPoint1;
 		string wayPoint2;
 		string wayPoint3;
-		data checking;
+		database checking;
     public:
 		//public functions
 		void inputPoints();

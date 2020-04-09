@@ -10,7 +10,7 @@
 #include <iomanip>
 using namespace std;
 
-void data::initialiseDatabase()
+void database::initialiseDatabase()
 {
 	databasefile.open("locDatabase.txt");  // Opens text file containing location data
 	int i;
@@ -22,7 +22,7 @@ void data::initialiseDatabase()
 }
 
 
-int data::checkPointDatabase(string startPoint, string endPoint, string wayPoint1, string wayPoint2, string wayPoint3)
+int database::checkPointDatabase(string startPoint, string endPoint, string wayPoint1, string wayPoint2, string wayPoint3)
 {
 	int j,k,l,m,n;
 	int i;
@@ -143,7 +143,7 @@ int data::checkPointDatabase(string startPoint, string endPoint, string wayPoint
 }
 
 
-float data::getLatitudeAtLocation(string point)
+float database::getLatitudeAtLocation(string point)
  {
 	int i;
 	float a,b,d;
@@ -169,7 +169,7 @@ float data::getLatitudeAtLocation(string point)
 	}
 	return d;
 }
-float data::getLongitudeAtLocation(string point)
+float database::getLongitudeAtLocation(string point)
 {
 	int i;
 	float a,b,d;

@@ -3,8 +3,8 @@
 // Written by Paul Ologeh
 // 03/11/2015
 
-#include<fstream>
-#include <string.h>
+#include <fstream>
+#include <string>
 #include <iostream>
 using namespace std;
 
@@ -22,7 +22,7 @@ struct location
 	
 };
 
-class data
+class database
 {
 	private:
 		ifstream databasefile;
