@@ -19,5 +19,7 @@ class journey
     public:
 		//public functions
 		void inputPoints();
+		float haversineFormula(float, float, float, float);
 		void getTotalDistance();
+		
 };
