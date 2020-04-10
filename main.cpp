@@ -10,9 +10,9 @@ int main()
 
 	std::cout << " Route Distance Calculator\n";
 	std::cout << "Calculates distance between 2 points\n";
-	
-	myJourney.inputPoints();  // call function to input points
-    myJourney.getTotalDistance();  // call funtion to calculate the distances between inputted points
+
+	myJourney.inputPoints();	  // call function to input points
+	myJourney.getTotalDistance(); // call funtion to calculate the distances between inputted points
 
 	return 0;
 }

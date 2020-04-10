@@ -19,21 +19,18 @@ struct location
 	int longitude_degree;
 	int longitude_minutes;
 	char longitude_direction;
-	
 };
 
 class database
 {
-	private:
-		ifstream databasefile;
-		location locations[120];
-	
-	
+private:
+	ifstream databasefile;
+	location locations[120];
+
 	// functions
-	public:
-		void initialiseDatabase();
-		bool checkPointDatabase(string, string, string, string, string);
-		float getLatitudeAtLocation(string);
-		float getLongitudeAtLocation(string);
-		
+public:
+	void initialiseDatabase();
+	bool checkPointDatabase(string, string, string, string, string);
+	float getLatitudeAtLocation(string);
+	float getLongitudeAtLocation(string);
 };
