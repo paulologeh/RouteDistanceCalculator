@@ -30,7 +30,7 @@ private:
 	// functions
 public:
 	void initialiseDatabase();
-	bool checkPointDatabase(string, string, string, string, string);
-	float getLatitudeAtLocation(string);
-	float getLongitudeAtLocation(string);
+	bool checkPointDatabase(string &, string &, string &, string &, string &);
+	float getLatitudeAtLocation(string &);
+	float getLongitudeAtLocation(string &);
 };

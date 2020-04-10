@@ -21,7 +21,7 @@ void database::initialiseDatabase()
 	}
 }
 
-bool database::checkPointDatabase(string startPoint, string endPoint, string wayPoint1, string wayPoint2, string wayPoint3)
+bool database::checkPointDatabase(string &startPoint, string &endPoint, string &wayPoint1, string &wayPoint2, string &wayPoint3)
 {
 	bool validStart = false, validEnd = false, validWay1 = false, validWay2 = false, validWay3 = false;
 
@@ -82,7 +82,7 @@ bool database::checkPointDatabase(string startPoint, string endPoint, string way
 	return false;
 }
 
-float database::getLatitudeAtLocation(string point)
+float database::getLatitudeAtLocation(string &point)
 {
 	float degrees, minutes, latitude;
 	char direction;
@@ -108,7 +108,7 @@ float database::getLatitudeAtLocation(string point)
 	return latitude;
 }
 
-float database::getLongitudeAtLocation(string point)
+float database::getLongitudeAtLocation(string &point)
 {
 	float degrees, minutes, longitude;
 	char direction;
