@@ -1,8 +1,3 @@
-// header file Database.h
-// this is the specification for the Database
-// Written by Paul Ologeh
-// 03/11/2015
-
 #include <fstream>
 #include <iostream>
 

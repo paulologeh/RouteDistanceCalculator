@@ -1,8 +1,3 @@
-// implementation file database.cpp
-//this is the implementation of the class
-// Written by Paul Ologeh
-// 03/11/2015
-
 #include "Database.h"
 #include <iostream>
 #include <string.h>

@@ -1,8 +1,3 @@
-// header file route.h
-// this is the specification for the journey routes
-// Written by Paul Ologeh
-// 03/11/2015
-
 #include "Database.h"
 
 using namespace std;

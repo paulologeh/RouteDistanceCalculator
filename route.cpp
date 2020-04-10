@@ -1,8 +1,3 @@
-// implementation file route.cpp
-// this is the implementation of the class journey
-// Written by Paul Ologeh
-// 03/11/2015
-
 #include "route.h"
 #include <iostream>
 #include <string.h>
