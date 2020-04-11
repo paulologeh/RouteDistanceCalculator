@@ -89,6 +89,7 @@ float database::getLatitudeAtLocation(string &point)
 			degrees = locations[i].latitude_degree;
 			minutes = locations[i].latitude_minutes;
 			direction = locations[i].latitude_direction;
+			break;
 		}
 	}
 	minutes = minutes * 0.000291; // converts minutes to radians
@@ -115,6 +116,7 @@ float database::getLongitudeAtLocation(string &point)
 			degrees = locations[i].longitude_degree;
 			minutes = locations[i].longitude_minutes;
 			direction = locations[i].longitude_direction;
+			break;
 		}
 	}
 	minutes = minutes * 0.000291;  // converts minutes to radians
