@@ -13,7 +13,7 @@ The program calculates and outputs the distance between each pair of points and 
 
 
 ## Installation
-Clone the repository locally
+Open up your terminal and clone the repository locally
 ```bash
 git clone https://github.com/paulologeh/RouteDistanceCalculator.git
 ```
