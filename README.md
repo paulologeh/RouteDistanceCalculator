@@ -15,7 +15,7 @@ The program calculates and outputs the distance between each pair of points and 
 ## Installation
 Clone the repository locally
 ```bash
-https://github.com/paulologeh/RouteDistanceCalculator.git
+git clone https://github.com/paulologeh/RouteDistanceCalculator.git
 ```
 Install dependencies using yum or apt or brew or whichever installer you use
 ``` bash
