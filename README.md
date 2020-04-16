@@ -13,13 +13,16 @@ The program calculates and outputs the distance between each pair of points and 
 
 
 ## Installation
-Open up your terminal and clone the repository locally, or download as ZIP
+Open up a terminal. If you have a mac (bash/zsh) will be the default terminal shell. If you use windows, i recommend opening PowerShell.
+
+Navigate to your desired directory and clone the repository 
 ```bash
 git clone https://github.com/paulologeh/RouteDistanceCalculator.git
 ```
-Install dependencies using yum or apt or brew or whichever installer you use
+
+Install the GNU C++ Compiler using yum or apt or homebrew installer you use
 ``` bash
-yum install gcc-c++
+sudo apt install gcc
 ``` 
 
 ## Usage
