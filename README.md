@@ -16,7 +16,7 @@ The program calculates and outputs the distance between each pair of points and 
 
 ## Setup
 ### Mac/Linux
-1. Install the GNU C++ Compiler using yum or apt or homebrew installer you use
+1. Install the GNU C++ Compiler
 ```bash
 sudo apt install gcc
 ```
