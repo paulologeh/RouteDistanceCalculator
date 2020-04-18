@@ -1,6 +1,7 @@
 # RouteDistanceCalculator
-## Overview
 C++ program that finds distances along a route with cities as start and end points and way points.
+
+## Overview
 The user inputs the names of the cities on the route from the keyboard at runtime.
 This includes the start point, the end point and three cities that should be way points.
 Distances between cities are calculated using latitude and longitude values for each point. 
