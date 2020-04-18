@@ -21,7 +21,7 @@ sudo apt install gcc
 ```bash
 git clone https://github.com/paulologeh/RouteDistanceCalculator.git
 ```
-## Windows
+### Windows
 1. Download @https://www.cygwin.com and select gcc, g++ etc and install.
 2. Open up PowerShell or command prompt. Navigate to your desired directory and clone the repository. You can also download and unzip the repository.
 ```batch
