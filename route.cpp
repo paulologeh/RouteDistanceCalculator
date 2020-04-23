@@ -35,7 +35,7 @@ void journey::inputPoints()
     }
 }
 
-float journey::haversineFormula(float startlong, float startlat, float endlong, float endlat)
+float journey::haversineFormula(float &startlong, float &startlat, float &endlong, float &endlat)
 {
     float Q = sin(0.5 * endlong - 0.5 * startlong);
     float K = sin(0.5 * endlat - 0.5 * startlat);
